@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hamza.com | Task08</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .submit-btn {
+            width: 100%;
+        }
+        .gradient-custom{
+            background-image: linear-gradient(120deg, rgb(97, 182, 228) 0%, rgb(50, 91, 178) 100%);
+            width: 100%;
+            background-size: cover;
+            
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 shadow-lg ">
+    <form class="text-start" id="Contact-form">
+        <h1 class="text-center mt-2 mb-5 fw-bolder">Contact us</h1>
+        <div class="mb-3 ">
+            <input type="email" class="form-control border-dark border-top-0 border-start-0 border-end-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Enter your email Address here" placeholder="123@gmail.com" required>
+            <label class="form-label pt-2 ps-2 ">Your Email</label>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control border-dark border-top-0 border-start-0 border-end-0" placeholder="john doe" required data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your name here">
+            <label class="form-label pt-2 ps-2 ">Name</label>
+            </div>
+
+            <div class="mb-3">
+            <textarea class="form-control border-dark border-top-0 border-start-0 border-end-0" placeholder="Your Message" rows="3" requireddata-bs-toggle="tooltip" data-bs-placement="top" title="Write your query here."></textarea>
+            <label class="form-label pt-2 ps-2">Your Message</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="subscribe" data-bs-toggle="tooltip" data-bs-placement="top" title="Subscribe to our newsletter for updates">
+                <label class="form-check-label" for="subscribe">Subscribe to our newsletter</label>
+            </div>
+
+            <div class="mb-3">
+            <button class="gradient-custom rounded-pill border-info btn-lg ps-5 pe-5 w-100 text-white text-lg-center">Submit</button>
+            </div>
+            <div class="mt-4 ms-3">
+                <div class="shadow-large p3 mb-5 ms-3 bg-body rounded ">
+                <button type="button" class="rounded-pill border-1 bg-transparent btn-lg text-primary border-light w-25 mb-5" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="Facebook" data-bs-content="Facebook page: XyZ-handler." ><i class="fa fa-facebook" aria-hidden="true"></i></button>
+                <button type="button" class="rounded-pill border-1 bg-transparent ms-3 btn-lg text-primary border-light w-25" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="Twitter" data-bs-content="Twitter page : XyZ-handler."><i class="fa fa-twitter" aria-hidden="true"></i></button>
+                <button type="button" class="rounded-pill border-1 bg-transparent ms-3 border-light btn-lg text-primary w-25" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="Facebook" data-bs-content="Email us at contactus@xyz.com." ><i class="fa fa-google-plus" aria-hidden="true"></i></button>
+            </div>
+            </div>
+        
+    </form>
+</div>
+<div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="summaryModalLabel">Form Summary</h5>
+                <button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalName">Name: </p>
+                <p id="modalEmail">Email: </p>
+                <p id="modalMessage">Message: </p>
+                <p id="modalSubscribe">Subscribe: </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit Form</button>
+              </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <script>
+         const form = document.getElementById('Contact-form');
+         form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const email = form.querySelector('input[type="email"]').value;
+              const name = form.querySelector('input[type="text"]').value;
+              const message = form.querySelector('textarea').value;
+              const subscribe = form.querySelector('input[type="checkbox"]').checked;
+              const modalName = document.getElementById('modalName');
+              const modalEmail = document.getElementById('modalEmail');
+              const modalMessage = document.getElementById('modalMessage');
+              const modalSubscribe = document.getElementById('modalSubscribe');
+              modalName.textContent = `Name: ${name}`;
+              modalEmail.textContent = `Email: ${email}`;
+              modalMessage.textContent = `Message: ${message}`;
+              modalSubscribe.textContent = `Subscribe: ${subscribe ? 'Yes' : 'No'}`;
+              const modal = new bootstrap.Modal(document.getElementById('summaryModal'));
+              modal.show();
+         });
+         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+        });
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+</script>
+
+</body>
+</html>

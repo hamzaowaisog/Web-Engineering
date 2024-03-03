@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hamza.com | Task04</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-pzjw8c+ZqTqG64do9vO93/CpP2UpwPQ1PwMVI9KqIeBuJSIaz7TEHdaI8u8GFCUz" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: rgb(218, 218, 218);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .div-form{
+            background-color: rgba(204, 201, 201, 0.63);
+        }
+        .quantity-input{
+            width: 30px;
+        }
+        .img-thumbnail{
+            width: 100px;
+            height: 100px;
+        }
+        .border-radius{
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .border-radius-down{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+    <script>
+        function incrementQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.stepUp();
+        }
+
+        function decrementQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.stepDown();
+        }
+    </script>
+
+</head>
+<body>
+        <div class="row justify-content-center align-middle m-5 shadow-lg  ">
+            <div class="col-8 bg-white border-radius">
+                <div class="d-flex justify-content-between ms-5 mt-3 me-5 mb-5">
+                    <div>
+                        <p class="h2 fw-bold ">Shopping Cart</p>
+                    </div>
+                    <div>3 items</div>
+                </div>
+                <div class="table-container ms-5 me-5 ">
+                <table class="table mt-5">
+                    <tr class="border-top">
+                        <td><img class="img-thumbnail" src="https://cdn.shopify.com/s/files/1/0558/5708/6644/products/box_front_clay_2500x2500_70e49640-a802-4eab-8633-dc23e18b96f0.jpg?v=1695220409&width=352&crop=center"></td>
+                        <td class="align-middle"><div>Shirt</div>
+                            <div class="fw-bold">Cotton T-shirt</div></td>
+                        <td class="align-middle"> 
+                            <div class="d-flex align-items-center">
+                            <button onclick="decrementQuantity()" class="bg-transparent border-0 fw-bold">-</button>
+                            <input type="number" id="quantity" class="quantity-input" name="quantity" value="1" min="1" max="999">
+                            <button onclick="incrementQuantity()" class="bg-transparent border-0 fw-bold">+</button>
+                            </div>
+                        </td>
+                            <td class="fw-bold align-middle ">$ 44.00</td>
+                            <td class="align-middle"> <button class="bg-transparent border-0"><i class="fa fa-times" aria-hidden="true"></i> 
+                            </button></td>
+                    </tr>
+                    <tr class="border-top">
+                        <td><img class="img-thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAAAQcIAgMFBgT/xABDEAACAQMBBAQKBQkJAAAAAAAAAQIDBAURBhIhMQdBUXEIEyIyUmGBkaHRFBVCosEjM0NigpKTo7EkJlNUVWNkc8L/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ALxAAAAAAfC7ZdKOB2WuJ2U3Vvb+HnW9vppB9kpPgn6uLKsz3TTtJkYyp42lb4um/tU142ov2pLT4AaDyGRssZbSucjdUbWhHnUrTUV8Ss83044O0qShibC6yO69PGaqjB+tNpv4FE5HJXuUuPpGTvK93W9OvUcmu7Xl7D8qa1frLgve36esVKKdzg76nLrVOpCa+Oh2vp4wWnk4jKa+tU1/6KCcfRep33Fd1oRgrehSUftQj5T73zGC7X09WDrJQwF26fXJ14KSXdp+J9rsr0i7N7TaU7S9Vvdf5a6/Jzfd1S9jMsLSK06zjwa0aTGDa2pJk/A7f7T4DcjY5WtOhD9Bc/laenc+K9jRY+A6dqU5RpbQYqVJddezlvLvcJcfc2MF0g/BhMxYZ3HUshirmFxa1V5M4dT601zT9TP3kAAAAAAAAA+b6QdoVsxsre5GLX0jd8VbKXXVlwjw69Ob9SZ9IUP4QmddfLWGCpS/J2sPpFb/ALJaqK9kdX+0BUdepOrVnVqzlUqTk5TnJ6uUm9W369TgyWDQ4kk6DQAmTqQAIYJ0GgEAaEgWV0HbTSxG0v1TXqtWWT8hJvhGt9l+1ax9fkmjDF1vcVbWvSuKE9ytRnGpTl2Si9U/ejX2zWWp53A4/KUfNuqEajXotrivY9USj0wAQAAAAAHXXqwoUZ1aslGnTi5Sk+pLizH+0uWnndocjlZtv6VXlOGvVDXyV7I6I0T0z5tYjYW7pRelbINWcEuySe/91S95mQsHHXijmdVXhJSXLrO5ciiCQAAJAHCbjFNtrVcUteZ7WdwccVTqTjczreLkk96goapuaTTUnrxpvs5o/Ts9laFjjb2hO6nbVa6kozhGT01UUpeT1rSXD1npYraOhWvcn9b3WtCtXVSgq1KVTSO9NtcFqno0uL4a68dNAPCzWz15h7elcXE6U6VVqMZQb4vRvrX6rPHnyXeezn8xVyFWrQUqUrSFeU6W5TUeGstOWnDypPlzfE8Ss9NEubYExfAvrwec39Iwt9hKs9alnW8dST/w5817JJ/vFDJaJI+w6Js0sFt1j6tR7tG6f0Sq+xTa0f7yiKNTAhEmQAAAAAZ96f8ANO82ltcTSlrSsKO/NJ/pZ8fhFR/eKsZfm3XQ/LOZO7y+Jyjhd3M3UqUbtb0G9OSkuMVwXUyqc7sFtPgt532IrypJ/nrdeNh36x5e1IsHy1bzWc4+ajrqPi4vmuDT5o7Ieau4okkjrJAAEgGCA+QEHXU/OR7jsR1VfP8AYB2ImDlCSlCTjOL1jJdTXJn6MZjr7KVVSxtlc3dR/ZoUpT/pyLA2e6GtpMjKNTJuhi6HN+MfjKj/AGYvT3sC8tjcxHP7L43KJrer0Iuok/NqLhNeySZ7R4WxmzNtsnhIYqzuK9enGcqjnWa13pc9EuCXqPdMgAAAAAEEgDycps1g8s9cniLG6l6VWhFyXc9NTL+3lna47bLMWdhRjQtaFw4U6cOUVouBrYyX0hT39us8/wDmzRYPnjkQSUCeogAA+QD5AQi9uhbZbZ/K7IRvsjh7K7uvpNWDqV6SqapPhwfAog0V0AT3thpr0b2qv6EosahbUban4u2pU6MFyjTior4HaAQAAAAAAAAAAAMhbZ1HU2wzsnz+sa6902vwNemPdqpb+1Wal25C4f8AMkWDzUACiQQAJIAAh8DQXg7zctkL+L5RyMkv4cH+Jn2Rfvg6y/uvk49mQb/lw+RKLYABAAAAAAAAAAAAxznp+Mz+UmuUrys/vs2MYxv5b+Qu5+lXqP7zLB0gEFEghjUASQAJfIvfwcp64LMQ7LyL98F8iiC8PBwl/Yc9Dsr0X74y+RKLkABAAAAAAAAAAAESekW+xGLar1q1H2zk/ibOu5blrWl2Qk/gYub3nr28SwSGwQ+ZQBDAHJAglAC7PBvekNoI685W7+Eyk2XJ4OE/7Xnqf+3Ql8Zii8QAZAAAAAAAAAAAflyktzGXcvRozf3WYypryI9yNmZanUrYq8pUI79WdCcYR101k4vRcTJV/svn8V5GQw1/R3Vxl4iUo+9aosHlMgNxTalJJp6NN8iN6HpR95QYIco+lH3kb0fSXvA5hMjej6UfeN6HpR94HIt7wcnpl83Htt6T+9L5lT2lpc3st2ytq9zLso05TfwRdHQNs9msTksld5PG3FpbV7eEacqy3XJqWvLnyfYSi5wAQAAAAAAAAAABDGgAHGdOFRaThGXetToePspedZ2776UfkABweJxr54+0ffQj8h9UYz/TrP8AgR+QAHJYywj5tjbLuox+R2QtLam9YW9GL/VgkAB3aIaAASAAAAAAAD//2Q=="></td>
+                        <td class="align-middle"><div>Shirt</div>
+                            <div class="fw-bold">Cotton T-shirt</div></td>
+                        <td class="align-middle"> 
+                            <div class="d-flex align-items-center">
+                            <button onclick="decrementQuantity()" class="bg-transparent border-0 fw-bold">-</button>
+                            <input type="number" id="quantity" class="quantity-input" name="quantity" value="1" min="1" max="999">
+                            <button onclick="incrementQuantity()" class="bg-transparent border-0 fw-bold">+</button>
+                            </div>
+                        </td>
+                            <td class="fw-bold align-middle ">$ 44.00</td>
+                            <td class="align-middle"> <button class="bg-transparent border-0"><i class="fa fa-times" aria-hidden="true"></i> 
+                            </button></td>
+                    </tr>
+                    <tr class="border-top">
+                        <td><img class="img-thumbnail" src="data:image/jpeg;base64,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"></td>
+                        <td class="align-middle"><div>Shirt</div>
+                            <div class="fw-bold">Cotton T-shirt</div></td>
+                        <td class="align-middle"> 
+                            <div class="d-flex align-items-center">
+                            <button onclick="decrementQuantity()" class="bg-transparent border-0 fw-bold">-</button>
+                            <input type="number" id="quantity" class="quantity-input" name="quantity" value="1" min="1" max="999">
+                            <button onclick="incrementQuantity()" class="bg-transparent border-0 fw-bold">+</button>
+                            </div>
+                        </td>
+                            <td class="fw-bold align-middle ">$ 44.00</td>
+                            <td class="align-middle"> <button class="bg-transparent border-0"><i class="fa fa-times" aria-hidden="true"></i> 
+                            </button></td>
+                    </tr>
+                    
+                </table>
+                <div>
+                    <button type="button" class="bg-transparent border-0 align-bottom mt-5"><i class="fa fa-arrow-left"> Back To Shop</i></button>
+                </div>
+
+                </div>
+            </div>
+            <div class="col-4 div-form border-radius-down">
+                <p class="h3 pt-5 ps-3 pb-3">Summary</p>
+                <hr>
+                <div class="d-flex justify-content-between ms-3">
+                    <div>
+                        <p class="fw-bold">ITEMS 3</p>
+                    </div>
+                    <div class="fw-bold">$132.00</div>
+                </div>
+                
+                <form>
+                    <label class="form-label ms-3 mb-3">SHIPPING</label>
+                    <div class="col-auto me-2">
+                    <select class="form-select ms-3 me-3" aria-label="Default select example">
+                        <option selected>Standard-Delivery-$5.00</option>
+                        <option value="1">Expree-Delivery-$8.00</option>
+                        <option value="2">Fast-Delivery-$10.00</option>
+                        
+                    </select>
+                </div>
+                <label for="" class="form-label ms-3 mb-3 mt-3">GIVE CODE</label>
+                  <div class="col-auto input-group ms-3 me-2 mb-5">
+                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Enter your code here">
+                    <span class="input-group-text me-2"><button type="submit" class="bg-transparent border-0 ">-></button></span>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between ms-3 mb-5">
+                    <div>
+                        <p class="fw-bold">TOTAL PRICE</p>
+                    </div>
+                    <div class="fw-bold">$137.00</div>
+                </div>
+                <button type="submit" class="btn bg-dark text-white w-100 mb-5 ">CHECKOUT</button>
+
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>
