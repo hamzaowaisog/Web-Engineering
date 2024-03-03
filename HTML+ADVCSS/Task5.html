@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.hamza.com|Task05</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: rgba(51, 51, 51, 0.8); 
+      text-align: center;
+      color: whitesmoke;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    li {
+      display: inline;
+      margin-right: 20px;
+      position: relative;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #55acee;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      top: 100%; 
+      left: 0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #55acee; 
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    nav ul li a {
+      font-weight: bold;
+    }
+
+    nav > ul > li {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    .cta-button + a {
+      margin-left: 10px;
+    }
+
+    .cta-button ~ a {
+      background-color: #55acee;
+      color: #55acee;;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Task 05</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="#">Web Design</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">SEO</a>
+        </div>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a class="cta-button" href="#">Get Started</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

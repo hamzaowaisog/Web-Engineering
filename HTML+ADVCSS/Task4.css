@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(85, 255, 229);
+    font-size: 14px;
+    font-family: 'poppins', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+.contact-box{
+    display: flex;
+    background-color: white;
+}
+.left-box{
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+.right-box{
+    flex-basis: 40%;
+    background-color: rgb(28, 0, 181);
+    color: white;
+    padding: 40px;
+}
+h1{
+    margin-bottom: 10px;
+}
+.container p{
+    margin-bottom: 40px;
+}
+.input-row{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+label{
+    margin-bottom: 10px;
+    display: block;
+    color: black;
+}
+button{
+    background-color: rgb(28, 0, 181); 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    width: 100px;  
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+h3{
+    color: rgb(28, 0, 181);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.right-box h3{
+    color: white;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top: 20px;
+}
