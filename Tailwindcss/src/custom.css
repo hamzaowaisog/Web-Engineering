@@ -1,0 +1,67 @@
+.list-decimal-5{
+    counter-reset: my-counter 4;
+  }
+  .list-decimal-5 li {
+    counter-increment: my-counter;
+  }
+  .list-decimal-5 li::before {
+    content: counter(my-counter) ". ";
+  }
+.list-upper-roman{
+    counter-reset: my-counter 0;
+  }
+  .list-upper-roman li {
+    counter-increment: my-counter;
+  }
+  .list-upper-roman li::before {
+    content: counter(my-counter, upper-roman) ". ";
+  }  
+
+  .list-lower-roman{
+    counter-reset: my-counter 0;
+  }
+    .list-lower-roman li {
+        counter-increment: my-counter;
+    }
+    .list-lower-roman li::before {
+        content: counter(my-counter, lower-roman) ". ";
+    }
+.responsive-image {
+  height: 28rem;
+}
+@media(min-wiidth:320px){
+  .responsive-image {
+      height: 8rem;
+  }
+
+}
+@media(min-width: 640px){
+  .responsive-image {
+      height: 12rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .responsive-image {
+      height: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-image {
+      height: 28rem;
+  }
+}
+
+body{
+  overflow-x: hidden;
+}
+.rounded-bottom-half{
+  border-bottom-left-radius: 12%;
+  border-bottom-right-radius: 12%;
+}
+.font-small{
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
