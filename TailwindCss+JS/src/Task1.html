@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hamza.com|Task01</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function datatypes(){
+        const num = 12;
+        const str = "Hamza";
+        const bool = true;
+        const arr = [1,2,3,4,5];
+        const obj = {name: "Hamza", age: 20};
+        //constant cannot be reassigned after their initial assignment
+        let num1 = 10;
+        let str1 = "Ali";
+        let bool1 = false;
+        let arr1 = [6,7,8,9,10];
+        let obj1 = {name: "Ali", age: 25};
+        // let can be reassigned after their initial assignment and can be redeclared
+
+        var num2 = 15;
+        var str2 = "Ahmed";
+        var bool2 = true;
+        var arr2 = [11,12,13,14,15];
+        var obj2 = {name: "Ahmed", age: 30};
+        // var can be reassigned after their initial assignment and can be redeclared as well but it is not recommended because they are globally scoped and can be changed anywhere in the code.
+
+        console.log("const num: ", num, "const str: ", str, "const bool: ", bool, "const arr: ", arr, "const obj: ", obj);
+        console.log("let num1: ", num1, "let str1: ", str1, "let bool1: ", bool1, "let arr1: ", arr1, "let obj1: ", obj1);
+        console.log("var num2: ", num2, "var str2: ", str2, "var bool2: ", bool2, "var arr2: ", arr2, "var obj2: ", obj2);
+    
+    }
+
+    datatypes();
+</script>
+</html>

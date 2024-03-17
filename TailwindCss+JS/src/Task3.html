@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hamza.com|Task03</title>
+    <style>
+      table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            width: auto;
+            padding: 10px;
+        }
+        #tab{
+            margin-top: 100px;
+            border: 1px  solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="tab">
+    <h1>PRINT TABLE</h1>
+    <input id="num" type="number" placeholder="enter number to write its table">
+    <button onclick="printTable()">Print Table</button><br><br>
+        <table id="table">
+            <tr>
+                <th>Number</th>
+                    <th>X</th>
+                <th>Multiplier</th>
+                <th>Result</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function printTable(){
+        var num = document.getElementById('num').value;
+        var table = document.getElementById("table");
+        for(i=0;i<=10;i++){
+            var row = document.createElement("TR");
+            var col1 = document.createElement("TD");
+            var col2 = document.createElement("TD");
+            var col3 = document.createElement("TD");
+            var col4 = document.createElement("TD");
+           col1.textContent = num;
+           col2.textContent = "x";
+           col3.textContent = i;
+           col4.textContent = num*i;
+
+           row.appendChild(col1);
+           row.appendChild(col2);
+           row.appendChild(col3);
+           row.appendChild(col4);
+           table.appendChild(row);
+        
+        } 
+    }
+</script>
+</html>

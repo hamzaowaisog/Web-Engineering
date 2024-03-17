@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hamxa.com|Task05</title>
+    <style>
+        .cent{
+            text-align: center;
+            margin-top: 100px;
+            padding-top: 100px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            padding-bottom: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cent">
+        <h1>Checking Palindrome</h1>
+        <input type="text" id="str" placeholder="Enter a string">
+        <button onclick="checkPalindrome()">Check Palindrome</button>
+    </div>    
+    
+</body>
+<script>
+    function checkPalindrome(){
+        var str = document.getElementById('str').value;
+        var rev = str.split('').reverse().join('');
+
+        if(str === rev){
+            alert("Text is Palindrome");
+        }
+        else{
+            alert("Text is not Palindrome");
+        }
+
+    }
+</script>
+</html>
